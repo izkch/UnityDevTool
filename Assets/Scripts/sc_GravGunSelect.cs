@@ -9,12 +9,17 @@ public class sc_GravGunSelect : MonoBehaviour
 
     private void Start()
     {
+        _gravgunscript._timeLastShot = 0;
+        _gravgunscript._mono = this;
         _gravgunscript.setTransform(_weaponTransform);
     }
     // Update is called once per frame
     void Update()
     {
-        if (Mouse.current.leftButton.IsPressed()) {
+        if (_gravgunscript._canBeHeld && Mouse.current.leftButton.IsPressed()) {
+            _gravgunscript.Shoot();
+        }else if (!_gravgunscript._canBeHeld && Mouse.current.leftButton.wasPressedThisFrame)
+        {
             _gravgunscript.Shoot();
         }
     }

@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66a10c0f266c5ac41b7a7a2c4bb9322d, type: 3}
   m_Name: NewGravGun
   m_EditorClassIdentifier: 
-  _weaponTransform: {fileID: 0}
+  _canBeHeld: 1
+  _push: 1
   _shootDistance: 10
   _layersToShoot:
     serializedVersion: 2
     m_Bits: 2147483647
-  _strength: 20
+  _strength: 200
+  _rate: 0.5
+  _trail: {fileID: 5125982020837957057, guid: 4b8215ff21b295c4b937729beeb8298e, type: 3}
+  _timeLastShot: 5.7449107
